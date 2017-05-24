@@ -1,7 +1,7 @@
 <?php
 return [
     'id' => 'app-test',
-    'basePath' => __DIR__ . '/../../',
+    'basePath' => __DIR__ . '/../',
     'sourceLanguage' => 'en-US',
     'timeZone'            => 'Europe/Moscow',
     'language'       => 'ru',
