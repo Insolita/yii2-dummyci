@@ -44,7 +44,7 @@ class AwesomeTest extends Unit
             '{{%dummy}}',
             [
                 'name' => 'qwerty',
-                'time' => date('Y-m-d H:i:s', time()),
+                'createdAt' => date('Y-m-d H:i:s', time()),
             ]
         )->execute();
         $check = (new Query())->select(['id'])->from('{{%dummy}}')->where(['name'=>'qwerty'])->count($db);
@@ -62,7 +62,7 @@ class AwesomeTest extends Unit
             '{{%dummy}}',
             [
                 'name' => 'qwerty',
-                'time' => date('Y-m-d H:i:s', time()),
+                'createdAt' => date('Y-m-d H:i:s', time()),
             ]
         )->execute();
         $check = (new Query())->select(['id'])->from('{{%dummy}}')->where(['name'=>'qwerty'])->count($db);
