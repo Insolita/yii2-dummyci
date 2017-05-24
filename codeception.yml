@@ -6,7 +6,7 @@ paths:
     data: tests/data
     helpers: tests/helpers
 settings:
-    bootstrap: bootstrap.local.php
+    bootstrap: bootstrap.php
     suite_class: \PHPUnit_Framework_TestSuite
     memory_limit: 1024M
     log: false
