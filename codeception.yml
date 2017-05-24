@@ -11,7 +11,6 @@ settings:
     memory_limit: 1024M
     log: false
     colors: true
-
 coverage:
     enabled: true
     whitelist:
