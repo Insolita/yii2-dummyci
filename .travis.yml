@@ -35,4 +35,5 @@ before_script:
   - php tests/yii pgmigrate/up --interactive=0
   - vendor/bin/codecept build
 script:
+  - php -S localhost:8080 > /dev/null 2>&1 &
   - vendor/bin/codecept run -vvv
