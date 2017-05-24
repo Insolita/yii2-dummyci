@@ -6,8 +6,5 @@ $dotenv = new \Dotenv\Dotenv(__DIR__.'/../');
 $dotenv->load();
 require(__DIR__ . '/../../vendor/yiisoft/yii2/Yii.php');
 Yii::setAlias('@tests', __DIR__);
-$config = \yii\helpers\ArrayHelper::merge(
-    require(__DIR__ . '/../config/base.php'),
-    require(__DIR__ . '/../config/functional.php')
-);
+$config = require(__DIR__ . '/../config/functional.php');
 (new \yii\web\Application($config))->run();

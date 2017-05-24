@@ -3,3 +3,4 @@ modules:
     enabled:
         - Filesystem
         - Yii2
+          configFile: 'tests/config/functional.php'
