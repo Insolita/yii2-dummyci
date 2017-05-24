@@ -29,6 +29,6 @@ install:
 
 before_script:
   - psql -c  'create database yii2_ext_test;' -U postgres
-  - vendor/bin/codeception build
+  - vendor/bin/codecept build
 script:
-  - vendor/bin/codeception run -vvv
+  - vendor/bin/codecept run -vvv
