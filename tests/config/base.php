@@ -1,4 +1,20 @@
 <?php
+$pgsql = [
+    'class'=>\yii\db\Connection::class,
+    'dsn' => getenv('PG_DSN'),
+    'username' => getenv('PG_USER'),
+    'password' => getenv('PG_PASSWORD'),
+    'charset' => 'utf8',
+    'tablePrefix' => 'test_'
+];
+$mysql = [
+    'class'=>\yii\db\Connection::class,
+    'dsn' => getenv('MYSQL_DSN'),
+    'username' => getenv('MYSQL_USER'),
+    'password' => getenv('MYSQL_PASSWORD'),
+    'charset' => 'utf8',
+    'tablePrefix' => 'test_'
+];
 return [
     'id' => 'app-test',
     'basePath' => __DIR__ . '/../',
@@ -13,6 +29,8 @@ return [
         'singletons'=>[]
     ],
     'components' => [
+        'db'=>$pgsql,
+        'mdb'=>$mysql,
         'dummy' =>[
             'class'=>\insolita\dummyci\Dummy::class
         ]

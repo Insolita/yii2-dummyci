@@ -11,6 +11,7 @@ matrix:
 
 services:
   - postgresql
+  - mysql
   - redis-server
 
 # cache vendor dirs
@@ -29,6 +30,9 @@ install:
 
 before_script:
   - psql -c  'create database yii2_ext_test;' -U postgres
+  - mysql -e 'CREATE DATABASE yii2_queue_test;'
+  - php tests/yii migrate --interactive=0
+  - php tests/yii pgmigrate --interactive=0
   - vendor/bin/codecept build
 script:
   - vendor/bin/codecept run -vvv

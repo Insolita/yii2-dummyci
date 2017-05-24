@@ -6,16 +6,12 @@ paths:
     data: tests/data
     helpers: tests/helpers
 settings:
-    bootstrap: bootstrap.php
+    bootstrap: bootstrap.local.php
     suite_class: \PHPUnit_Framework_TestSuite
     memory_limit: 1024M
     log: false
     colors: true
-modules:
-   enabled:
-      - Yii2:
-            part: [orm,fixtures]
-            configFile: 'tests/config.php'
+
 coverage:
     enabled: true
     whitelist:

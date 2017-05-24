@@ -1,1 +1,3 @@
 runtime/*
+tests/helpers/*
+tests/bootstrap.local.php
