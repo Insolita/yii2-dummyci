@@ -1,13 +1,10 @@
 language: php
 
 php:
-  - 5.6
   - 7.0
   - 7.1
 matrix:
   fast_finish: true
-  allow_failures:
-    - php: 5.6
 
 services:
   - postgresql
@@ -33,7 +30,7 @@ install:
 
 before_script:
   - psql -c  'create database yii2_ext_test;' -U postgres
-  - mysql -e 'CREATE DATABASE yii2_queue_test;'
+  - mysql -e 'CREATE DATABASE yii2_ext_test;'
   - php tests/yii migrate/up --interactive=0
   - php tests/yii pgmigrate/up --interactive=0
   - vendor/bin/codecept build
