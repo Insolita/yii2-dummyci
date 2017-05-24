@@ -13,7 +13,9 @@ return [
         'singletons'=>[]
     ],
     'components' => [
-    
+        'dummy' =>[
+            'class'=>\insolita\dummyci\Dummy::class
+        ]
     ],
     'modules'=>[],
     'params'=>[]

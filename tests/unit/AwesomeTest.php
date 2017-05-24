@@ -14,4 +14,10 @@ class AwesomeTest extends Unit
         $var = 2 + 3;
         verify($var)->equals(5);
     }
+    
+    public function testDummyComponent()
+    {
+        $sum = \Yii::$app->dummy->sum(2, 3);
+        verify($sum)->equals(5);
+    }
 }
