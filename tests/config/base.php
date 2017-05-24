@@ -35,6 +35,10 @@ return [
             'class'=>\insolita\dummyci\Dummy::class
         ]
     ],
-    'modules'=>[],
+    'modules'=>[
+        'mydummy'=>[
+            'class'=>\insolita\dummyci\dummymodule\Module::class
+        ]
+    ],
     'params'=>[]
 ];
