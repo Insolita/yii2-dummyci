@@ -2,6 +2,9 @@
 $base = require(__DIR__).'/base.php';
 $functional = [
     'components'=>[
+        'request'=>[
+            'enableCsrfValidation' => false,
+        ],
         'urlManager'=>[
             'class'=>\yii\web\UrlManager::class,
             'showScriptName' => true,
