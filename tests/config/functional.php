@@ -1,6 +1,8 @@
 <?php
 $base = require(__DIR__).'/base.php';
 $functional = [
+    'layout'=>false,
+    'defaultRoute'=>'mydummy/default/index',
     'components'=>[
         'request'=>[
             'enableCsrfValidation' => false,
