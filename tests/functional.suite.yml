@@ -3,5 +3,4 @@ modules:
     enabled:
         - Filesystem
         - Yii2:
-              part: [orm,fixtures,email]
               configFile: 'tests/config/functional.php'
